@@ -1,0 +1,41 @@
+table{
+  border-spacing:inherit;
+  width: 1000px;
+  background-image: 
+}
+.headerfooter {
+  text-align:center;
+  color:white;
+  font-size: 50px;
+  font-style: oblique;
+  background-color: black;
+}
+#cot1{
+  padding-bottom:70px;
+  padding-left:10px;
+  background-color: red;
+  width: 150px;
+}
+#cot2{
+  padding-left:10px;
+}
+
+#lesson3{
+	background: url('https://i.ytimg.com/vi/eRxo9ZWLzt8/maxresdefault.jpg');
+	padding-left: 20px;
+	border-spacing: 20px;
+}
+#email,#city{
+	width: 400px;
+}
+#address{
+	width: 875px;
+}
+#password{
+	width: 400px;
+	padding-left: 0px;
+}
+#zip{
+	width: 270px;
+}
+
