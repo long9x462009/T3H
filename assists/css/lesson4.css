@@ -1,0 +1,48 @@
+ul{
+	list-style-type: none;
+  overflow: hidden;
+  background-color: #333;
+  overflow: hidden;
+  display: block;
+}
+li{
+	float: left;
+}
+li a {
+  display: block;
+  color: #ffffff;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+.menu2-li{
+	float: right;
+}
+#active1{
+	background-color: green;
+}
+#menu2{
+	background-color: #1b447a;
+	border-left: 1px solid black;
+}
+#active2{
+	background-color: black;
+}
+#table1{
+	padding: 0px 5%;
+}
+#table2{
+	text-align: center;
+}
+#contactme{
+	color: #1b447a;
+	text-decoration: underline;
+}
+input {
+	border-top:1px solid grey;
+	border-left: 0px;
+	border-bottom: 0px;
+	border-right: 0px;
+	width: 75%;
+	height: 30px;
+}
