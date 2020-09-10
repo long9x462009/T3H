@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <script>
+      function displayTable() {
+        var my_table = "<table width='100%'>";
+        var row = 0;
+        var col;
+        var list = [
+          ["Hung", "hung_link1"],
+          ["Vuong", "vuong_link1"],
+          ["Long", "long_link1"],
+          ["Hai", "hai_link1"],
+          ["Giang", "giang_link1"]
+        ];
+
+        for (row = 0; row < list.length; row++) {
+          my_table += "<tr>";
+
+          for (col = 0; col < 3; col++) {
+            if (col == 0) {
+              my_table += "<td>" + list[row] + "</td>";
+            } else {
+              my_table += "<td>" + col + "</td>";
+            }
+          }
+
+          my_table += "</tr>";
+        }
+
+        my_table += "</table>";
+
+        return my_table;
+      }
+
+      function reset() {
+        document.getElementById("demo").innerHTML = "";
+      }
+    </script>
+
+    <style>
+      table,
+      th,
+      td {
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h2>My First JavaScript</h2>
+
+    <button
+      type="button"
+      onclick="document.getElementById('demo').innerHTML = displayTable()"
+    >
+      List
+    </button>
+
+    <button type="button" onclick="reset()">
+      Reset
+    </button>
+
+    <p id="demo"></p>
+  </body>
+</html>
