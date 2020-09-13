@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <style>
+        .sale-off {
+            text-decoration: line-through;
+        }
+        .dropbtn {
+          background-color: #3498DB;
+          color: white;
+          padding: 16px;
+          font-size: 16px;
+          border: none;
+          cursor: pointer;
+        }
+
+        .dropbtn:hover, .dropbtn:focus {
+          background-color: #2980B9;
+        }
+
+        .dropdown {
+          position: relative;
+          display: inline-block;
+        }
+
+        .dropdown-content {
+          display: none;
+          position: absolute;
+          background-color: #f1f1f1;
+          min-width: 160px;
+          overflow: auto;
+          box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+          z-index: 1;
+        }
+
+        .dropdown-content a {
+          color: black;
+          padding: 12px 16px;
+          text-decoration: none;
+          display: block;
+        }
+
+        .dropdown a:hover {background-color: #ddd;}
+
+        .show {display: block;}
+    </style>
+</head>
+
+<body>
+
+    <div class="jumbotron text-center">
+        <h1>My First Bootstrap Page</h1>
+        <p>Resize this responsive page to see the effect!</p>
+
+        <div id="demo" class="carousel slide" data-ride="carousel">
+
+            <!-- Indicators -->
+            <ul class="carousel-indicators">
+                <li data-target="#demo" data-slide-to="0" class="active"></li>
+                <li data-target="#demo" data-slide-to="1"></li>
+                <li data-target="#demo" data-slide-to="2"></li>
+            </ul>
+
+            <!-- The slideshow -->
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://www.w3schools.com/howto/img_nature_wide.jpg" alt="Los Angeles" width="1100"
+                        height="500">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://www.w3schools.com/howto/img_nature_wide.jpg" alt="Chicago" width="1100"
+                        height="500">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://www.w3schools.com/howto/img_nature_wide.jpg" alt="New York" width="1100"
+                        height="500">
+                </div>
+            </div>
+
+            <!-- Left and right controls -->
+            <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a class="carousel-control-next" href="#demo" data-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </a>
+        </div>
+
+    </div>
+
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top" style="margin:24px 0;">
+            <a class="navbar-brand" href="javascript:void(0)">Logo</a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+                data-target="#navb">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navb">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="javascript:void(0)">Link</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="javascript:void(0)">Link</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="javascript:void(0)">Disabled</a>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="text" placeholder="Search" id="search">
+                    <button class="btn btn-success my-2 my-sm-0" type="button" >Search</button>
+                </form>
+            </div>
+        </nav>
+        <div class="float-right">
+            <select id="orderby">
+              <option value="order" selected disabled>Order by</option>
+              <option id="priceup" value="priceup">Price up</option>
+              <option id="pricedown" value="pricedown">Price down</option>
+            </select>
+        </div>
+        <div id="" class="row mb-3 mt-3">
+
+            <div class="col-sm-3 mb-3 product">
+                <div class="card" style="">
+                    <img class="card-img-top" src="https://www.w3schools.com/bootstrap4/img_avatar1.png"
+                        alt="Card image" style="width:100%">
+                    <div class="card-body">
+                        <h4 class="card-title">Macbook 2017</h4>
+                        <p class="card-text">
+                            <i class="sale-off">$1000</i> -> <i>$500</i>
+                        </p>
+                        <p>Description</p>
+                        <a href="#" class="btn btn-primary">Buy</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-3 mb-3 product">
+                <div class="card" style="">
+                    <img class="card-img-top" src="https://www.w3schools.com/bootstrap4/img_avatar1.png"
+                        alt="Card image" style="width:100%">
+                    <div class="card-body">
+                        <h4 class="card-title">Macbook 2020</h4>
+                        <p class="card-text">
+                            <i>$1000</i>
+                        </p>
+                        <p>Description</p>
+                        <a href="#" class="btn btn-primary">Buy</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-3 mb-3 product">
+                <div class="card" style="">
+                    <img class="card-img-top" src="https://www.w3schools.com/bootstrap4/img_avatar1.png"
+                        alt="Card image" style="width:100%">
+                    <div class="card-body">
+                        <h4 class="card-title">Iphone15</h4>
+                        <p class="card-text">
+                            <i>$1000</i>
+                        </p>
+                        <p>Description</p>
+                        <a href="#" class="btn btn-primary">Buy</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-3 mb-3 product">
+                <div class="card" style="">
+                    <img class="card-img-top" src="https://www.w3schools.com/bootstrap4/img_avatar1.png"
+                        alt="Card image" style="width:100%">
+                    <div class="card-body">
+                        <h4 class="card-title">John Doe</h4>
+                        <p class="card-text">
+                            <i>$1000</i>
+                        </p>
+                        <p>Description</p>
+                        <a href="#" class="btn btn-primary">Buy</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-3 mb-3 product">
+                <div class="card" style="">
+                    <img class="card-img-top" src="https://www.w3schools.com/bootstrap4/img_avatar1.png"
+                        alt="Card image" style="width:100%">
+                    <div class="card-body">
+                        <h4 class="card-title">Macbook 2016</h4>
+                        <p class="card-text">
+                            <i class="sale-off">$1000</i> -> <i>$500</i>
+                        </p>
+                        <p>Description</p>
+                        <a href="#" class="btn btn-primary">Buy</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-3 mb-3 product">
+                <div class="card" style="">
+                    <img class="card-img-top" src="https://www.w3schools.com/bootstrap4/img_avatar1.png"
+                        alt="Card image" style="width:100%">
+                    <div class="card-body">
+                        <h4 class="card-title">Macbook 2015</h4>
+                        <p class="card-text">
+                            <i>$1000</i>
+                        </p>
+                        <p>Description</p>
+                        <a href="#" class="btn btn-primary">Buy</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-3 mb-3 product">
+                <div class="card" style="">
+                    <img class="card-img-top" src="https://www.w3schools.com/bootstrap4/img_avatar1.png"
+                        alt="Card image" style="width:100%">
+                    <div class="card-body">
+                        <h4 class="card-title">Iphone14</h4>
+                        <p class="card-text">
+                            <i>$1000</i>
+                        </p>
+                        <p>Description</p>
+                        <a href="#" class="btn btn-primary">Buy</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-3 mb-3 product">
+                <div class="card" style="">
+                    <img class="card-img-top" src="https://www.w3schools.com/bootstrap4/img_avatar1.png"
+                        alt="Card image" style="width:100%">
+                    <div class="card-body">
+                        <h4 class="card-title">John Mac</h4>
+                        <p class="card-text">
+                            <i>$1000</i>
+                        </p>
+                        <p>Description</p>
+                        <a href="#" class="btn btn-primary">Buy</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-3 mb-3 product">
+                <div class="card" style="">
+                    <img class="card-img-top" src="https://www.w3schools.com/bootstrap4/img_avatar1.png"
+                        alt="Card image" style="width:100%">
+                    <div class="card-body">
+                        <h4 class="card-title">Macbook 2013</h4>
+                        <p class="card-text">
+                            <i>$1000</i>
+                        </p>
+                        <p>Description</p>
+                        <a href="#" class="btn btn-primary">Buy</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-3 mb-3 product">
+                <div class="card" style="">
+                    <img class="card-img-top" src="https://www.w3schools.com/bootstrap4/img_avatar1.png"
+                        alt="Card image" style="width:100%">
+                    <div class="card-body">
+                        <h4 class="card-title">Iphone13</h4>
+                        <p class="card-text">
+                            <i>$1000</i>
+                        </p>
+                        <p>Description</p>
+                        <a href="#" class="btn btn-primary">Buy</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-3 mb-3 product">
+                <div class="card" style="">
+                    <img class="card-img-top" src="https://www.w3schools.com/bootstrap4/img_avatar1.png"
+                        alt="Card image" style="width:100%">
+                    <div class="card-body">
+                        <h4 class="card-title">John Dao</h4>
+                        <p class="card-text">
+                            <i>$1000</i>
+                        </p>
+                        <p>Description</p>
+                        <a href="#" class="btn btn-primary">Buy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+        <div class="row">
+            <div class="col-sm-3">
+                <h5>THÔNG TIN</h5>
+                <p><a href="#">Giới thiệu</a></p>
+                <p><a href="#">Sản phẩm</a></p>
+                <p><a href="#">Tin tức</a></p>
+                <p><a href="#">Tuyển dụng</a></p>
+                <p><a href="#">Liên hệ</a></p>
+            </div>
+            <div class="col-sm-3">
+                <h3>Column 2</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+            </div>
+            <div class="col-sm-3">
+                <h3>Column 3</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+            </div>
+            <div class="col-sm-3">
+                <h3>Column 3</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // $(document).ready(function () {
+        //     $("#search").keyup(function () {
+        //         var search_key = $(this).val();
+        //         console.log(search_key);
+        //         var productList = $('.product');
+
+        //         console.log(productList);
+        //         productList.each(function(index) {
+        //             var product =$(this);
+        //             var productInfo = product.text().toLowerCase();
+        //              if (productInfo.indexOf(search_key) == -1){
+        //                 product.hide();
+        //              } else {
+        //                  product.show();
+        //              }
+        //         });
+        //     });
+        // });
+        // filter 1
+        // $(document).ready(function () {
+        //     $("#search").keyup(function () {
+        //         var key = $(this).val().toLowerCase();
+
+        //         $('.product').show().filter(function() {
+        //             return $(this).text().toLowerCase().indexOf(key) == -1;
+        //         }).hide();
+        //     });
+        // });
+
+        $(document).ready(function(){
+            $("#search").on("keyup", function() {
+                var value = $(this).val().toLowerCase();
+                $('.product').filter(function() {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                });
+            });
+        });
+        // function myFunction() {
+        //     // Declare variables
+        //   var input, filter, table, tr, td, i, txtValue;
+        //   input = document.getElementById("myInput");
+        //   filter = input.value.toUpperCase();
+        //   table = document.getElementById("myTable");
+        //   tr = table.getElementsByTagName("tr");
+
+        //   // Loop through all table rows, and hide those who don't match the search query
+        //   for (i = 0; i < tr.length; i++) {
+        //     td = tr[i].getElementsByTagName("td")[0];
+        //     if (td) {
+        //       txtValue = td.textContent || td.innerText;
+        //       if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        //         tr[i].style.display = "";
+        //       } else {
+        //         tr[i].style.display = "none";
+        //       }
+        //     }
+        //   }
+        // }
+        /* When the user clicks on the button, 
+        toggle between hiding and showing the dropdown content */
+        function myFunction() {
+          document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function(event) {
+          if (!event.target.matches('.dropbtn')) {
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+              var openDropdown = dropdowns[i];
+              if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+              }
+            }
+          }
+        }
+    </script>
+</body>
+
+</html>
