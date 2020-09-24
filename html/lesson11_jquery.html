@@ -9,7 +9,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
     <style>
         .sale-off {
             text-decoration: line-through;
@@ -117,19 +116,44 @@
                         <a class="nav-link disabled" href="javascript:void(0)">Disabled</a>
                     </li>
                 </ul>
+                <div>
+            <div>
+            <div class="cart_number">10</div>
+            <svg
+              width="1em"
+              height="1em"
+              viewBox="0 0 16 16"
+              class="bi bi-cart"
+              fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm7 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"
+              />
+            </svg>
+            </div>
                 <form class="form-inline my-2 my-lg-0">
                     <input class="form-control mr-sm-2" type="text" placeholder="Search" id="search">
                     <button class="btn btn-success my-2 my-sm-0" type="button" >Search</button>
                 </form>
             </div>
         </nav>
-        <div class="float-right">
-            <select id="orderby">
-              <option value="order" selected disabled>Order by</option>
-              <option id="priceup" value="priceup">Price up</option>
-              <option id="pricedown" value="pricedown">Price down</option>
-            </select>
-        </div>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Products</li>
+                <li class="offset-md-9">
+                    <select class="form-control form-control-sm order">
+                        <option>Order By</option>
+                        <option>Decrease</option>
+                        <option>Increase</option>
+                    </select>
+                </li>
+            </ol>
+
+        </nav>
+        <div>
         <div id="" class="row mb-3 mt-3">
 
             <div class="col-sm-3 mb-3 product">
@@ -139,7 +163,7 @@
                     <div class="card-body">
                         <h4 class="card-title">Macbook 2017</h4>
                         <p class="card-text">
-                            <i class="sale-off">$1000</i> -> <i>$500</i>
+                           <i>$500</i>
                         </p>
                         <p>Description</p>
                         <a href="#" class="btn btn-primary">Buy</a>
@@ -169,7 +193,7 @@
                     <div class="card-body">
                         <h4 class="card-title">Iphone15</h4>
                         <p class="card-text">
-                            <i>$1000</i>
+                            <i>$7000</i>
                         </p>
                         <p>Description</p>
                         <a href="#" class="btn btn-primary">Buy</a>
@@ -184,7 +208,7 @@
                     <div class="card-body">
                         <h4 class="card-title">John Doe</h4>
                         <p class="card-text">
-                            <i>$1000</i>
+                            <i>$6000</i>
                         </p>
                         <p>Description</p>
                         <a href="#" class="btn btn-primary">Buy</a>
@@ -199,7 +223,7 @@
                     <div class="card-body">
                         <h4 class="card-title">Macbook 2016</h4>
                         <p class="card-text">
-                            <i class="sale-off">$1000</i> -> <i>$500</i>
+                           <i>$400</i>
                         </p>
                         <p>Description</p>
                         <a href="#" class="btn btn-primary">Buy</a>
@@ -214,7 +238,7 @@
                     <div class="card-body">
                         <h4 class="card-title">Macbook 2015</h4>
                         <p class="card-text">
-                            <i>$1000</i>
+                            <i>$1200</i>
                         </p>
                         <p>Description</p>
                         <a href="#" class="btn btn-primary">Buy</a>
@@ -229,7 +253,7 @@
                     <div class="card-body">
                         <h4 class="card-title">Iphone14</h4>
                         <p class="card-text">
-                            <i>$1000</i>
+                            <i>$1400</i>
                         </p>
                         <p>Description</p>
                         <a href="#" class="btn btn-primary">Buy</a>
@@ -244,7 +268,7 @@
                     <div class="card-body">
                         <h4 class="card-title">John Mac</h4>
                         <p class="card-text">
-                            <i>$1000</i>
+                            <i>$1500</i>
                         </p>
                         <p>Description</p>
                         <a href="#" class="btn btn-primary">Buy</a>
@@ -259,7 +283,7 @@
                     <div class="card-body">
                         <h4 class="card-title">Macbook 2013</h4>
                         <p class="card-text">
-                            <i>$1000</i>
+                            <i>$1400</i>
                         </p>
                         <p>Description</p>
                         <a href="#" class="btn btn-primary">Buy</a>
@@ -274,7 +298,7 @@
                     <div class="card-body">
                         <h4 class="card-title">Iphone13</h4>
                         <p class="card-text">
-                            <i>$1000</i>
+                            <i>$1500</i>
                         </p>
                         <p>Description</p>
                         <a href="#" class="btn btn-primary">Buy</a>
@@ -289,7 +313,7 @@
                     <div class="card-body">
                         <h4 class="card-title">John Dao</h4>
                         <p class="card-text">
-                            <i>$1000</i>
+                            <i>$1200</i>
                         </p>
                         <p>Description</p>
                         <a href="#" class="btn btn-primary">Buy</a>
@@ -297,7 +321,7 @@
                 </div>
             </div>
         </div>
-
+        </div>
         <hr>
         <div class="row">
             <div class="col-sm-3">
@@ -361,6 +385,7 @@
                 var value = $(this).val().toLowerCase();
                 $('.product').filter(function() {
                     $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                console.log();
                 });
             });
         });
@@ -385,25 +410,119 @@
         //     }
         //   }
         // }
+
+
         /* When the user clicks on the button, 
         toggle between hiding and showing the dropdown content */
-        function myFunction() {
-          document.getElementById("myDropdown").classList.toggle("show");
-        }
+        // function myFunction() {
+        //   document.getElementById("myOrderby").classList.toggle("show");
+        // }
+
 
         // Close the dropdown if the user clicks outside of it
-        window.onclick = function(event) {
-          if (!event.target.matches('.dropbtn')) {
-            var dropdowns = document.getElementsByClassName("dropdown-content");
-            var i;
-            for (i = 0; i < dropdowns.length; i++) {
-              var openDropdown = dropdowns[i];
-              if (openDropdown.classList.contains('show')) {
-                openDropdown.classList.remove('show');
-              }
-            }
-          }
+        // window.onclick = function(event) {
+        //   if (!event.target.matches('.dropbtn')) {
+        //     var dropdowns = document.getElementsByClassName("dropdown-content");
+        //     var i;
+        //     for (i = 0; i < dropdowns.length; i++) {
+        //       var openDropdown = dropdowns[i];
+        //       if (openDropdown.classList.contains('show')) {
+        //         openDropdown.classList.remove('show');
+        //       }
+        //     }
+        //   }
+        // }
+
+
+
+        // $('.form-control').on('change',function() {
+        //     var money_arr = [];
+        //     $('.product').each(function(index) {
+        //             var price = $(this).children('.card').children('.card-body').children('.card-text').text();
+        //             // console.log(prize);
+        //             var last$_position= prize.lastIndexOf('$');
+        //             var money = price.substring(last$_position+1,price.length-1);
+        //             // console.log(money);  
+        //             $(this).addClass(money);
+        //             money_arr.push(Number(money));  
+        //             // console.log(money_arr);              
+        //         });
+        //         // remove duplicate
+        //         var uniquePrizes = [];
+        //         $.each(money_arr, function(i, el){
+        //             if($.inArray(el, uniquePrizes) === -1) uniquePrizes.push(el);
+        //             // console.log(uniquePrizes);
+        //         });
+        //         // SORT DATA
+        //         var increase_arr = uniquePrizes.slice().sort((a,b) => a-b);
+        //         console.log(increase_arr);
+        //         var decrease_arr = uniquePrizes.slice().sort((a,b) => b-a);
+        //         // console.log(decrease_arr);
+
+        //         var order_option = $(this).val();
+        //         $('.product').remove();
+
+        //         // iNCREASE OPTION
+        //         if(order_option == "Increase") {
+
+        //             for(var i=0; i< uniquePrizes.length; i++) {
+        //                 $('.products').append($('.'+increase_arr[i]).show());
+        //             }
+        //         }
+
+        //         // DECREASE OPTION
+        //         if(order_option == "Decrease") {
+
+        //             for(var i=0; i< uniquePrizes.length; i++) {
+        //                 $('.products').append($('.'+decrease_arr[i]).show());
+        //             }
+        //         }
+
+        //         // REMOVE SORT OPTION
+        //         if(order_option == "Order By") {
+        //             location.reload();
+        //         }
+
+        //     });
+
+
+
+      $(".order").change(function () {
+          var orderType = $(this).val();
+          var products = $(".product");
+
+          var orderProduct = sortProduct(products, orderType);
+
+          products.remove();
+
+          // show orderProduct
+          $("#products").append(orderProduct);
+        });
+
+        function sortProduct(products, type) {
+          var results = [];
+          var prices = [];
+          products.each(function (index) {
+            var product = $(this);
+            var priceArr = product.find("i").text().split("$");
+            var price = priceArr[priceArr.length - 1];
+
+            prices[index] = price;
+
+            product.addClass(price);
+          });
+
+          var orderPrices = prices.sort(function (a, b) {
+            return a - b;
+          });
+
+          $.each(orderPrices, function (index, value) {
+            results[index] = $("." + value);
+          });
+
+          return results;
         }
+
     </script>
 </body>
 
